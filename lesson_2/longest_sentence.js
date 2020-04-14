@@ -42,33 +42,33 @@ let longText = 'Four score and seven years ago our fathers brought forth' +
   ' what we say here, but it can never forget what they' +
   ' did here. It is for us the living, rather, to be dedicated' +
   ' here to the unfinished work which they who fought' +
-  ' here have thus far so nobly advanced.';
-  // It is rather for' +
-  // ' us to be here dedicated to the great task remaining' +
-  // ' before us -- that from these honored dead we take' +
-  // ' increased devotion to that cause for which they gave' +
-  // ' the last full measure of devotion -- that we here highly' +
-  // ' resolve that these dead shall not have died in vain' +
-  // ' -- that this nation, under God, shall have a new birth' +
-  // ' of freedom -- and that government of the people, by' +
-  // ' the people, for the people, shall not perish from the' +
-  // ' earth.';
+  ' here have thus far so nobly advanced. It is rather for' +
+  ' us to be here dedicated to the great task remaining' +
+  ' before us -- that from these honored dead we take' +
+  ' increased devotion to that cause for which they gave' +
+  ' the last full measure of devotion -- that we here highly' +
+  ' resolve that these dead shall not have died in vain' +
+  ' -- that this nation, under God, shall have a new birth' +
+  ' of freedom -- and that government of the people, by' +
+  ' the people, for the people, shall not perish from the' +
+  ' earth.';
+
+  //wordsInSentences
 
 function longestSentence(text) {
-  let sentencesArrays;
+  let wordsInSentences;
   let longest;
 
-  sentencesArrays = text.split(/[.!?]/g)
-                     .map(sentence => sentence.trim())
-                     .map(sentence => sentence.split(' '));
+  wordsInSentences = text.split(/[.!?]/g)
+                         .map(sentence => sentence.trim())
+                         .map(sentence => sentence.split(' '));
 
-  longest = sentencesArrays.reduce(function(previous, current) {
+  longest = wordsInSentences.reduce(function(previous, current) {
     return current.length > previous.length ? current : previous;
   });
 
-  console.log(`${longest.join(' ')}.`);
-  console.log('');
-  console.log(`The longest sentence has ${longest.length} words.`)
+  console.log(`${longest.join(' ')}.\n`);
+  console.log(`The longest sentence has ${longest.length} words.`);
 }
 
 longestSentence(longText);

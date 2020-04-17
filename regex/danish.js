@@ -1,0 +1,1 @@
+let danish = string => string.replace(/\b(apple|blueberry|cherry)\b/, 'danish');

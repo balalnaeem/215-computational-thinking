@@ -1,0 +1,1 @@
+let mysteryMath = string => string.replace(/[\+\*\-\/]/, '?');
